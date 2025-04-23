@@ -6,65 +6,122 @@ import Navbar from "../components/Navbar.astro";
   <Navbar />
   <main style="padding: 4rem 2rem; max-width: 800px; margin: auto; text-align: left;">
 
-    Welcome to the official doctrine of the Obsidian Empire, forged to guide our path through strife, shadow, and sovereignty.
-    <section>
-      <h2>👑 Emperor of Obsidian</h2>
-      <p>The eternal flame that guides the Empire’s path.
-        Wields final authority in all matters, ensuring balance between war, craft, diplomacy, and unity.
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        Welcome to the official doctrine of the Obsidian Empire, forged to guide our path through strife, shadow, and sovereignty.
+        <h1>👑 Emperor of Obsidian</h1>
+        <p>The eternal flame that guides the Empire’s path.
+            Wields final authority in all matters, ensuring balance between war, craft, diplomacy, and unity.
         </p>
-    </section>
-
-    <section>
-      <h2>🔱 The Council of Four</h2>
-      <p>Our empire thrives under the leadership of four officers, each representing a pillar of our strength.</p>
-    </section>
-
-    <section>
-      <hr/>
-      <h3>⚔️ Warlord of Obsidian</h3>
-      <p>The sword that cleaves chaos from order.</p>
-        <section class="charter-section">
-      <div class="charter-text">        
-        🎯 <b>Role</b>: Military Command, PvP Strategy, Node & Castle Sieges
-
-            Responsibilities:
-        <ul>
-            <li>Lead all war efforts: sieges, open-world PvP, and guild wars</li>
-            <li>Train members in group tactics, counterplay, and battlefield synergy</li>
-            <li>Scout enemy threats and maintain readiness</li>
-            <li>Plan coordinated attack and defense strategies with allies</li>
-        </ul>
       </div>
-      <div class="charter-image">
-        <img src="assets/warlord.png"  alt="Obsidian Art" />
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+        <img src="assets/Emperor.png" alt="Emperor" 
+             style="max-width: 30%; 
+                    border-radius: 12px; 
+                    box-shadow: 0 0 15px #ff3c00;
+                    transition: transform 0.3s ease,z-index 0.3s ease;
+                    position: relative;
+                    z-index: 1;                    
+                    " 
+          onmouseover="this.style.transform='translateX(100px)  translateY(300px) scale(5)';this.style.zIndex='10';" 
+          onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />
       </div>
-      </section>
+    </section>
+    
+    <hr/>
+    
+    
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        <h1>🔱 The Council of Four</h1>
+        <p>Our empire thrives under the leadership of four officers, each representing a pillar of our strength.</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+        <img src="assets/council.png" alt="council" 
+                style="max-width: 30%; 
+                border-radius: 12px; 
+                box-shadow: 0 0 15px #ff3c00;
+                transition: transform 0.3s ease,z-index 0.3s ease;
+                position: relative;
+                z-index: 1;                    
+                " 
+        onmouseover="this.style.transform='translateX(100px)  translateY(100px) scale(6)';this.style.zIndex='10';" 
+        onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />
+      </div>      
     </section>
 
-    <section>
-        <hr/>
-        <h3>🛠️ Forgewarden</h3>
+
+    <hr/>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        <h2>⚔️ Warlord of Obsidian</h2>
+        <p>The sword that cleaves chaos from order.</p>
+          <section class="charter-section">
+          <div class="charter-text">        
+           🎯 <b>Role</b>: Military Command, PvP Strategy, Node & Castle Sieges
+
+              Responsibilities:
+          <ul>
+              <li>Lead all war efforts: sieges, open-world PvP, and guild wars</li>
+              <li>Train members in group tactics, counterplay, and battlefield synergy</li>
+              <li>Scout enemy threats and maintain readiness</li>
+              <li>Plan coordinated attack and defense strategies with allies</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+        <img src="assets/warlord.png" alt="Warlord" 
+                style="max-width: 30%; 
+                border-radius: 12px; 
+                box-shadow: 0 0 15px #ff3c00;
+                transition: transform 0.3s ease,z-index 0.3s ease;
+                position: relative;
+                z-index: 1;                    
+                " 
+        onmouseover="this.style.transform='translateX(100px)  translateY(100px) scale(4)';this.style.zIndex='10';" 
+        onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />      
+      </div>
+    </section>
+
+    <hr/>
+
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        <h2>🛠️ Forgewarden</h2>
         <p>The fire beneath the mountain—silent, steady, and powerful.</p>
         <div class="charter-text">
-        <p>
-            🎯 Role: Crafting, Professions, Supply Management
+          <p>
+              🎯 Role: Crafting, Professions, Supply Management
 
-            Responsibilities:
-            <ul>            
-                <li>Oversee gathering and processing operations</li>
-                <li>Manage the Guild Crafting Planner & Resource Tracker</li>
-                <li>Track profession leveling and optimize artisan roles</li>
-                <li>Organize resource collection missions and caravan logistics</li>
-            </ul>
-        </p>
+              Responsibilities:
+              <ul>            
+                  <li>Oversee gathering and processing operations</li>
+                  <li>Manage the Guild Crafting Planner & Resource Tracker</li>
+                  <li>Track profession leveling and optimize artisan roles</li>
+                  <li>Organize resource collection missions and caravan logistics</li>
+              </ul>
+          </p>
         </div>
-        <div class="charter-image">
-        </div>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+        <img src="assets/forger.png" alt="Forger"
+                  style="max-width: 30%; 
+                  border-radius: 12px; 
+                  box-shadow: 0 0 15px #ff3c00;
+                  transition: transform 0.3s ease,z-index 0.3s ease;
+                  position: relative;
+                  z-index: 1;                    
+                  " 
+          onmouseover="this.style.transform='translateX(100px)  translateY(100px) scale(5)';this.style.zIndex='10';" 
+          onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />      
+
+      </div>
     </section>
   
-    <section>
-        <hr/>
-        <h3>🕵️ Shadow Envoy</h3>
+    <hr/>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        <h2>🕵️ Shadow Envoy</h2>
         <p>A voice in silence, a dagger unseen.</p>
         <p>
 
@@ -78,11 +135,25 @@ import Navbar from "../components/Navbar.astro";
                 <li>Scout enemy troop movement and guide caravan safety</li>
             </ul>
         </p>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+          <img src="assets/blackscroll.png" alt="Black Scroll" 
+                  style="max-width: 30%; 
+                  border-radius: 12px; 
+                  box-shadow: 0 0 15px #ff3c00;
+                  transition: transform 0.3s ease,z-index 0.3s ease;
+                  position: relative;
+                  z-index: 1;                    
+                  " 
+          onmouseover="this.style.transform='translateX(100px)  translateY(100px) scale(5)';this.style.zIndex='10';" 
+          onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />  
+      </div>
     </section>
-  
-    <section>
-        <hr/>
-        <h3>🔥 Heartkeeper</h3>
+      
+    <hr/>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; gap: 2rem;">
+      <div style="flex: 1; min-width: 300px;">
+        <h2>🔥 Heartkeeper</h2>
         <p>The warmth of the hearth, the unity of the flame.</p>
         <p>
             🎯 Role: Community, Recruitment, Events
@@ -95,8 +166,20 @@ import Navbar from "../components/Navbar.astro";
                 <li>Mediate member conflicts and preserve a positive environment</li>            
            </ul>
        </p>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+          <img src="assets/hearts.png" alt="Black Scroll" 
+                  style="max-width: 30%; 
+                  border-radius: 12px; 
+                  box-shadow: 0 0 15px #ff3c00;
+                  transition: transform 0.3s ease,z-index 0.3s ease;
+                  position: relative;
+                  z-index: 1;                    
+                  " 
+          onmouseover="this.style.transform='translateX(100px)  translateY(-100px) scale(6)';this.style.zIndex='10';" 
+          onmouseout="this.style.transform='translateX(0) translateY(0) scale(1)';this.style.zIndex='1';" />        
+      </div>
     </section>
-  
 
   </main>
 </BaseLayout>
