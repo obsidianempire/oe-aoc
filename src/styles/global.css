@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background-color: #0b0b0b;
+    color: #f0e6d2;
+  }
+  
+  a {
+    color: #ff3c00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #fff;
+    background-color: #ff3c00;
+  }
+  
