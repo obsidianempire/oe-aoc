@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout>
   <Navbar />
@@ -15,7 +16,7 @@ import Navbar from "../components/Navbar.astro";
         </p>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-        <img src="assets/Emperor.png" alt="Emperor" 
+        <img src= {`${base}assets/Emperor.png`}  alt="Emperor" 
              style="max-width: 30%; 
                     border-radius: 12px; 
                     box-shadow: 0 0 15px #ff3c00;
@@ -37,7 +38,7 @@ import Navbar from "../components/Navbar.astro";
         <p>Our empire thrives under the leadership of four officers, each representing a pillar of our strength.</p>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-        <img src="assets/council.png" alt="council" 
+        <img src={`${base}assets/council.png`} alt="council" 
                 style="max-width: 30%; 
                 border-radius: 12px; 
                 box-shadow: 0 0 15px #ff3c00;
@@ -70,7 +71,7 @@ import Navbar from "../components/Navbar.astro";
         </div>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-        <img src="assets/warlord.png" alt="Warlord" 
+        <img src={`${base}assets/warlord.png`} alt="Warlord" 
                 style="max-width: 30%; 
                 border-radius: 12px; 
                 box-shadow: 0 0 15px #ff3c00;
@@ -104,7 +105,7 @@ import Navbar from "../components/Navbar.astro";
         </div>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-        <img src="assets/forger.png" alt="Forger"
+        <img src={`${base}assets/forger.png`} alt="Forger"
                   style="max-width: 30%; 
                   border-radius: 12px; 
                   box-shadow: 0 0 15px #ff3c00;
@@ -137,7 +138,7 @@ import Navbar from "../components/Navbar.astro";
         </p>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-          <img src="assets/blackscroll.png" alt="Black Scroll" 
+          <img src={`${base}assets/blackscroll.png`} alt="Black Scroll" 
                   style="max-width: 30%; 
                   border-radius: 12px; 
                   box-shadow: 0 0 15px #ff3c00;
@@ -168,7 +169,7 @@ import Navbar from "../components/Navbar.astro";
        </p>
       </div>
       <div style="flex: 1; min-width: 200px; text-align: center;">
-          <img src="assets/hearts.png" alt="Black Scroll" 
+          <img src={`${base}assets/hearts.png`} alt="Black Scroll" 
                   style="max-width: 30%; 
                   border-radius: 12px; 
                   box-shadow: 0 0 15px #ff3c00;
