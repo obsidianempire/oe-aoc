@@ -1,11 +1,42 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+
+const imageImports = import.meta.glob('/public/assets/gallery/*.{jpg,jpeg,png,gif,webp}', { as: 'url' });
+const images = await Promise.all(Object.values(imageImports).map(fn => fn()));
+
 ---
 <BaseLayout>
   <Navbar />
   <main style="padding: 4rem 2rem; max-width: 800px; margin: auto; text-align: left;">
     <h1 style="color: #ff3c00;">Guild Members</h1>
     <p>Meet the heroes of the Obsidian Empire. This section will showcase our core team and active members.</p>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        {images.map((src, i) => (
+          <img src={src} alt={`Slide ${i + 1}`} />
+        ))}
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+    </div>
+    
+    <script is:inline>
+      let currentIndex = 0;
+      const track = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-track img');
+      const totalSlides = slides.length;
+    
+      document.querySelector('.carousel-button.next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      });
+    
+      document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      });
+    </script>
   </main>
 </BaseLayout>
